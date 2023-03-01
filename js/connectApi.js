@@ -24,6 +24,6 @@ async function createVideo(titulo, descricao, url, imagem) {
 };
 
 export const connectApi = {
-    videoList
-    
+    videoList,
+    createVideo
 }
