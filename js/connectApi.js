@@ -18,7 +18,9 @@ async function createVideo(titulo, descricao, url, imagem) {
             imagem: imagem
         })
     });
-
+    if (!conect.ok) {
+        throw new Error("Não foi possível enviar o video")
+    }
     const convertedApi = await conect.json();
     return convertedApi
 };
